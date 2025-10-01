@@ -146,6 +146,12 @@ final List<Map<String, dynamic>> practicals = [
     'icon': Icons.app_registration_outlined,
   },
   {
+    'title': 'Student Management System',
+    'subtitle': 'Manage Student Records',
+    'widget': StudentListScreen(),
+    'icon': Icons.school_rounded,
+  },
+  {
     'title': 'Notes App',
     'subtitle': 'Note Taking & Management',
     'widget': NotesApp(),
@@ -168,12 +174,6 @@ final List<Map<String, dynamic>> practicals = [
     'subtitle': 'Comprehensive Auth System',
     'widget': SplashScreen(),
     'icon': Icons.login_rounded,
-  },
-  {
-    'title': 'Student Management System',
-    'subtitle': 'Manage Student Records',
-    'widget': StudentListScreen(),
-    'icon': Icons.school_rounded,
   }
 ];
 
