@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 enum Priority { low, medium, high }
-
 class Todo {
   String title;
   bool isDone;
@@ -13,16 +12,14 @@ class Todo {
     this.priority = Priority.low,
   });
 }
-
 class TodoList extends StatefulWidget {
   @override
   _TodoListState createState() => _TodoListState();
 }
-
 class _TodoListState extends State<TodoList> {
   final List<Todo> _todos = [];
   String _searchQuery = '';
-  int _filterIndex = 0; // 0: All, 1: Pending, 2: Done
+  int _filterIndex = 0;
 
   List<Todo> get _filteredTodos {
     List<Todo> filtered = _todos;

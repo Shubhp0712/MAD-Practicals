@@ -27,7 +27,6 @@ class _SplashScreenState extends State<SplashScreen>
     _controller.forward();
 
     Timer(const Duration(seconds: 3), () {
-      // Navigate to next screen or do something
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => LoginScreen()),

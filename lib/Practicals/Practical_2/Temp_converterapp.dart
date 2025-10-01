@@ -25,7 +25,6 @@ class _TempConverterappState extends State<TempConverterapp> {
     }
 
     double valueInCelsius;
-    // Convert input to Celsius first
     switch (_fromUnit) {
       case 'Fahrenheit':
         valueInCelsius = (input - 32) * 5 / 9;
@@ -39,7 +38,7 @@ class _TempConverterappState extends State<TempConverterapp> {
 
     double converted;
     String symbol;
-    // Convert from Celsius to target unit
+    
     switch (_toUnit) {
       case 'Fahrenheit':
         converted = (valueInCelsius * 9 / 5) + 32;
@@ -116,10 +115,7 @@ class _TempConverterappState extends State<TempConverterapp> {
                                 textAlign: TextAlign.center,
                               ),
                               SizedBox(height: isDesktop ? 32 : 24),
-
-                              // Responsive unit selection
                               if (screenWidth < 400)
-                              // Stack layout for very small screens
                                 Column(
                                   children: [
                                     _buildUnitSelector('From', _fromUnit, (value) {
@@ -138,7 +134,6 @@ class _TempConverterappState extends State<TempConverterapp> {
                                   ],
                                 )
                               else
-                              // Row layout for larger screens
                                 IntrinsicHeight(
                                   child: Row(
                                     children: [

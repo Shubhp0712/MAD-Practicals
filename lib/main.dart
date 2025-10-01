@@ -91,28 +91,28 @@
 //   }
 // }
 import 'package:flutter/material.dart';
-import 'dart:async'; // Required for the animation delay
-
-// Dummy imports (replace with your actual widget imports)
-import 'practicals/practical_1/splashscreen.dart';
+import 'dart:async';
+import 'practicals/practical_1/splashscreen.dart' as splash1;
 import 'practicals/practical_2/temp_converterapp.dart';
 import 'practicals/practical_3/to_do.dart';
 import 'Practicals/CIE_1/practical_1.dart';
 import 'Practicals/CIE_1/practical_2.dart';
 import 'Practicals/Practical_4/Registration_form.dart';
+import 'Practicals/Practical_5/screens/student_list_screen.dart';
 import 'Practicals/Practical_6/notes_app.dart';
 import 'Practicals/Practical_7/Product_catalog_app.dart';
+import 'Practicals/Practical_8/weather_news_app.dart';
+import 'Practicals/Practical_9/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-// --- PRACTICALS LIST ---
 final List<Map<String, dynamic>> practicals = [
   {
     'title': 'Splash Screen',
     'subtitle': 'App Launch & Branding',
-    'widget': SplashScreen(),
+    'widget': splash1.SplashScreen(),
     'icon': Icons.launch_rounded,
   },
   {
@@ -157,9 +157,26 @@ final List<Map<String, dynamic>> practicals = [
     'widget': ProductCatalogApp(),
     'icon': Icons.shopping_cart,
   },
+  {
+    'title': 'Weather & News App',
+    'subtitle': 'Weather Forecast & News Updates',
+    'widget': WeatherNewsApp(),
+    'icon': Icons.cloud,
+  },
+  {
+    'title': 'Login & Auth System',
+    'subtitle': 'Comprehensive Auth System',
+    'widget': SplashScreen(),
+    'icon': Icons.login_rounded,
+  },
+  {
+    'title': 'Student Management System',
+    'subtitle': 'Manage Student Records',
+    'widget': StudentListScreen(),
+    'icon': Icons.school_rounded,
+  }
 ];
 
-// --- MAIN APP ---
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
@@ -198,7 +215,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// --- LAUNCHER SCREEN ---
 class LauncherScreen extends StatelessWidget {
   final List<Map<String, dynamic>> practicals;
 
@@ -245,7 +261,6 @@ class LauncherScreen extends StatelessWidget {
   }
 }
 
-// --- CARD WIDGET WITH ANIMATION ---
 class PracticalCard extends StatefulWidget {
   final String title;
   final String subtitle;

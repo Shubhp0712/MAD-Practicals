@@ -18,7 +18,6 @@ class DashboardScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Gradient background
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -28,7 +27,6 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Main content
           Center(
             child: Card(
               elevation: 12,

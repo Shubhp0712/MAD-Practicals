@@ -26,13 +26,11 @@ class RegistrationSuccessPage extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                // Success Header
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 30),
                   child: Column(
                     children: [
-                      // Success Animation Container
                       Container(
                         width: 120,
                         height: 120,
@@ -75,8 +73,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                     ],
                   ),
                 ),
-
-                // Registration Details Card
                 Card(
                   elevation: 15,
                   shape: RoundedRectangleBorder(
@@ -107,8 +103,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 25),
-
-                        // Personal Information Section
                         _buildSectionHeader(
                           'Personal Information',
                           Icons.person,
@@ -128,8 +122,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                         ),
 
                         const SizedBox(height: 25),
-
-                        // Address Information Section
                         _buildSectionHeader(
                           'Address Information',
                           Icons.location_on,
@@ -146,8 +138,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                         _buildInfoRow('ZIP Code', registrationData['zipCode']),
 
                         const SizedBox(height: 25),
-
-                        // Account Information Section
                         _buildSectionHeader(
                           'Account Information',
                           Icons.security,
@@ -159,11 +149,8 @@ class RegistrationSuccessPage extends StatelessWidget {
                         _buildInfoRow('Account ID', _generateAccountId()),
 
                         const SizedBox(height: 30),
-
-                        // Action Buttons
                         Column(
                           children: [
-                            // Download Details Button
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton.icon(
@@ -192,8 +179,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 15),
-
-                            // Continue Button
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton.icon(
@@ -224,8 +209,6 @@ class RegistrationSuccessPage extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 10),
-
-                            // Edit Information Button
                             SizedBox(
                               width: double.infinity,
                               child: TextButton.icon(
